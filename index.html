@@ -8,7 +8,7 @@
     <title>Document</title>
   </head>
   <body>
-    <section class="vh-100" style="background-color: #eee">
+    <section class="d-flex justify-content-center align-items-center" style="background-color: #eee">
       <div class="container h-100">
         <div class="row d-flex justify-content-center align-items-center h-100">
           <div class="col-lg-12 col-xl-11">
@@ -21,7 +21,8 @@
                     </p>
 
                     <form class="mx-1 mx-md-4">
-                      <div class="d-flex flex-row align-items-center mb-4">
+
+                      <div class="d-flex flex-row align-items-center mb-4 email-container">
                         <i class="fas fa-envelope fa-lg me-3 fa-fw"></i>
                         <div class="form-outline flex-fill mb-0">
                           <input
@@ -36,7 +37,7 @@
                         </div>
                       </div>
 
-                      <div class="d-flex flex-row align-items-center mb-4">
+                      <div class="d-flex flex-row align-items-center mb-4 password-container"">
                         <i class="fas fa-lock fa-lg me-3 fa-fw"></i>
                         <div class="form-outline flex-fill mb-0">
                           <input
@@ -44,6 +45,9 @@
                             id="password"
                             class="form-control form-reg"
                             value="Password"
+                            oncopy="this.value='';return false"
+                            onpaste="this.value=''; return false"
+                            oncut="this.value=''; return false"
                           />
                           <label class="form-label" for="form3Example4c"
                             >Password</label
@@ -694,28 +698,12 @@
                         </button>
                       </div>
                       
-                      <div class="card rule"
+
+                      <div class="rules">
+                        
+ 
+                      </div>
                       
-                       >
-                        <div class="card-header rule-number" id="rule1">
-                          Rule 1
-                        </div>
-                        <div class="card-body rule-inner">
-                          <p class="card-text rule-text">With supporting text below as a natural lead-in to additional content.</p>
-                        </div>
-                      </div>
-
-
-
-
-                      <div class="card rule">
-                        <div class="card-header rule-number" id="rule1">
-                          Rule 1
-                        </div>
-                        <div class="card-body rule-inner">
-                          <p class="card-text rule-text">With supporting text below as a natural lead-in to additional content.</p>
-                        </div>
-                      </div>
 
 
 

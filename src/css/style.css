@@ -7,6 +7,10 @@
 body{
     font-family: 'Poppins', sans-serif;
 }
+section {
+    position: relative;
+    min-height: 100vh;
+}
 
 .terms{
     font-weight: 700;
@@ -15,6 +19,9 @@ h2{
     font-weight: 700;
 }
 
+.rules *{
+    transition: background .2s ease-in-out;
+}
 .rule {
     border: 1px solid red;
     border-radius: 10px;

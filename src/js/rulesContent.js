@@ -29,6 +29,10 @@ export const rulesContent={
     },
     'rule8' : {
         'title' : 'Rule 8',
-        'text' : ' Yuor Password must include today\'s Wordle answer'
+        'text' : ' Yuor Password must include today\'s Wordle answer(if server error, word is "apple")'
+    },
+    'rule9' : {
+        'title' : 'Rule 9',
+        'text' : ' Repeat your password'
     },
 }

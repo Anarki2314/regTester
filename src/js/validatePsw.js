@@ -1,18 +1,11 @@
 import ruleValidator from "./validateRules.js";
 import { rulesContent } from "./rulesContent.js";
+import { validateForm } from "./validateForm.js";
 
 
 export function validatePsw(){
     let password = document.getElementById('password').value;
     addRule('rule1');
-    const rule1=ruleValidator.rule1(password);
-    const rule2 = ruleValidator.rule2(password);
-    const rule3 = ruleValidator.rule3(password);
-    const rule4 = ruleValidator.rule4(password);
-    const rule5 = ruleValidator.rule5(password);
-    const rule6 = ruleValidator.rule6(password);
-    const rule7 = ruleValidator.rule7(password);
-    const rule8 = ruleValidator.rule8(password);
 
     if (ruleValidator.rule1(password)){
         addRule('rule2');
@@ -36,8 +29,12 @@ export function validatePsw(){
         addRule('rule8');
     }
     if (ruleValidator.rule8(password)){
+        addRule('rule9');
         addRePassword();
+        document.getElementById('rePassword').addEventListener('input',()=> ruleValidator.rule9(password) );
+        document.getElementById('rePassword').addEventListener('blur',()=> validateForm());
     }
+    return ruleValidator.allRulesCorrect(password)
 }
 
 function addRule(ruleID)  {
@@ -74,6 +71,9 @@ function addRePassword() {
                             id="rePassword"
                             class="form-control form-reg"
                             value="Repeat your password"
+                            oncopy="this.value='';return false"
+                            onpaste="this.value=''; return false"
+                            oncut="this.value=''; return false"
                           />
                           <label class="form-label" for="form3Example5c"
                             >Repeat your password (●'◡'●)</label

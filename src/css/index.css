@@ -1,0 +1,56 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Poppins', sans-serif;
+}
+section {
+    position: relative;
+    min-height: 100vh;
+}
+
+.terms{
+    font-weight: 700;
+}
+h2{
+    font-weight: 700;
+}
+
+.rules *{
+    transition: background .2s ease-in-out;
+}
+.rule {
+    border: 1px solid red;
+    border-radius: 10px;
+    overflow: hidden;
+    margin: 22px auto;
+    animation: rule-in .5s ease-in 1;
+}
+@keyframes rule-in {
+    from {
+        opacity: 0;
+        transform: translateX(-200px);
+    } to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+.rule.correct {
+    border: 1px solid #267b30;
+}
+.rule-number{
+    background: #ffc7c7;
+}
+.rule-number.correct{
+    background: #aef3ae;
+}
+.rule-inner{
+    background: #ffecec;
+}
+
+.rule-inner.correct{
+    background: #e3ffe3;
+}

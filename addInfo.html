@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/src/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="/src/css/addInfo.css" />
+    <title>Additional Information</title>
+</head>
+<style>
+
+
+</style>
+<body>
+    <section class="d-flex justify-content-center align-items-center vh-100" style="background-color: #eee">
+        <div class="container h-100">
+            <div class="row d-flex justify-content-center align-items-center h-100">
+                <div class="col-lg-12 col-xl-11">
+                    <div class="card text-black" style="border-radius: 25px">
+                        <div class="card-body p-md-5">
+                            <div class="row justify-content-center">
+                                <div class="col-10 order-2 order-lg-1">
+                                    <p class="text-center h1 fw-bold mb-5 mx-1 mx-md-4 mt-4"></p>
+
+                                    <form>
+                                        <div class="row mb-4">
+                                            <div class="form-outline col-6 mb-0">
+                                                <input type="text" id="name" class="form-control form-reg" required
+                                                    placeholder="Your Name" />
+                                                <label class="form-label">Your Name</label>
+                                            </div>
+                                            
+                                            <div class="d-flex flex-column justify-content-between form-outline col-6 mb-0">
+                                                <input type="range" id="height" class="form-range form-reg" 
+                                                    sta min="120" max="220" step="1" onchange="document.getElementById('heightVal').innerHTML=this.value + `cm`">
+                                                <label class="form-label">Your Height: <span id="heightVal"></span></label>
+                                            </div>
+                                        </div>
+
+                                        <div class="row mb-4 email-container">
+                                            <div class="form-outline col-6 mb-0">
+                                                <input type="text" id="surname" class="form-control form-reg" required
+                                                    placeholder="Your Surname" />
+                                                <label class="form-label">Your Surname</label>
+                                            </div>
+
+                                            <div class="d-flex flex-column justify-content-between form-outline col-6 mb-0">
+                                                <input type="range" id="age" class="form-range form-reg" 
+                                                     sta min="14" max="100" step="1" onchange="document.getElementById('ageVal').innerHTML=this.value">
+                                                <label class="form-label">Your Age: <span id="ageVal"></span></label>
+                                            </div>
+                                        </div>
+
+                                        <div class="row mb-4 email-container">
+                                            <div class="form-outline col-6 mb-0">
+                                                <input type="text" id="patronymic" class="form-control form-reg" required
+                                                    placeholder="Your Patronymic" />
+                                                <label class="form-label">Your Patronymic</label>
+                                            </div>
+
+                                            <div class="d-flex flex-column justify-content-between form-outline col-6 mb-0">
+
+                                                <div class="input-group">
+                                                    <input type="text" id="day" class="form-control text-center" placeholder="Day" readonly value="1">
+                                                    <input type="text" id="month" class="form-control text-center" placeholder="Month" readonly value="1">
+                                                    <input type="text" id="year" class="form-control text-center" placeholder="Year" readonly value="1900">
+                                                  </div>
+                                                  <div class="input-group mb-1">
+                                                    <div class="form-control birthday btn btn-primary" data-min="1" data-max="31" data-birthday="day" >Day</div>
+                                                    <div class="form-control birthday btn btn-primary" data-min="1" data-max="12" data-birthday="month" >Month</div>
+                                                    <div class="form-control birthday btn btn-primary" data-min="1900" data-max="2045" data-birthday="year" >Year</div>
+                                                  </div>
+                                                <label class="form-label">Your Birthday: <span id="birthday"></span></label>
+
+                                            </div>
+                                        </div>
+                                        <div class="row mb-4 email-container">
+                                            <div class="btn-group col-6 btn-group-toggle" data-toggle="button">
+                                                <input type="radio" class="btn-check" name="options" id="male"
+                                                    autocomplete="off" checked />
+                                                <label class="d-flex align-items-center justify-content-center btn btn-outline-primary" for="male">Male</label>
+
+                                                <input type="radio" class="btn-check" name="options" id="female"
+                                                    autocomplete="off" />
+                                                <label class="d-flex align-items-center justify-content-center btn btn btn-outline-primary" for="female">Female</label>
+                                            </div>
+
+                                            <div class="form-outline col-6 mb-0">
+                                                <input type="text" id="number" class="form-control form-reg" required
+                                                    placeholder="Your Number"  minlength="10"/>
+                                                    <div class="input-group mb-1">
+                                                        <div class="form-control btn btn-primary" id="addNum">Add number</div>
+                                                        <div class="form-control btn btn-primary" id="resetNum">Reset number</div>
+                                                      </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="row">
+                                            
+                                            <div class="col-6">
+                                                <button type="button" id="nextBtn"
+                                                    class="btn btn-danger w-100 mt-2 mb-2">
+                                                    Next
+                                                </button>
+                                            </div>
+                                            <div class="col-6">
+                                                <button type="button" id="cancelBtn"
+                                                    class="btn btn-primary w-100 mt-2 mb-2">
+                                                    Cancel
+                                                </button>
+                                            </div>
+                                            <div class="col-12">
+                                                <button type="button" id="resetBtn"
+                                                    class="btn btn-success w-100 mt-2 mb-2">
+                                                    Reset
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </form>
+
+                                    <div class="modal" id="repeat" tabindex="-1">
+                                        <div class="modal-dialog modal-dialog-centered">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                    <h5 class="modal-title" id="exampleModalLongTitle">
+                                                        Repeat your password (●'◡'●)
+                                                    </h5>
+                                                </div>
+                                                <div class="modal-body">
+                                                    <div
+                                                        class="d-flex flex-row align-items-center rePassword-container">
+                                                        <div class="form-outline flex-fill">
+                                                            <input type="text" id="rePassword"
+                                                                class="form-control form-reg"
+                                                                value="Repeat your password"
+                                                                oncopy="this.value='';return false"
+                                                                onpaste="this.value=''; return false"
+                                                                oncut="this.value=''; return false" />
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="modal-footer">
+                                                    <button type="button" class="btn btn-danger" id="modalNext">
+                                                        Next
+                                                    </button>
+                                                    <button type="button" class="btn btn-primary" id="modalCancel">
+                                                        Cancel
+                                                    </button>
+                                                    <button type="button" class="btn btn-success" id="modalReset">
+                                                        Reset
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+<script src="src/js/bootstrap.bundle.min.js"></script>
+<script type="module" src="./src/js/addInfo/addInfo.js"></script>
+
+</html>

@@ -1,167 +1,267 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="src/css/bootstrap.min.css" />
     <link rel="stylesheet" href="src/css/hobbies.css" />
     <title>Hobbies</title>
-</head>
-<body>
-    <section class="d-flex justify-content-center align-items-center vh-100" style="background-color: #eee">
-        <div class="container h-100">
-          <div class="row d-flex justify-content-center align-items-center h-100">
-            <div class="col-lg-12 col-xl-11">
-              <div class="card text-black" style="border-radius: 25px">
-                <div class="card-body p-md-5">
-                  <div class="row justify-content-center">
-                    <div class="col-10 order-2 order-lg-1">
-                      <p class="text-center h1 fw-bold mb-5 mx-1 mx-md-4 mt-4">
-                        Select Your Hobbies
-                      </p>
-                      
-                      <p class="mb-3 h3">Choose 5 hobbies</p>
-                      <form>
-                        <div class="hobbies d-flex justify-content-between flex-wrap border-bottom mb-5">
-                                <div class="form-check hobbie col-3 mb-3 mt-3">
-                                    <input class="form-check-input" type="checkbox" checked >
-                                    <label class="form-check-label" >
-                                        Ponies
-                                    </label>
-                                </div>
-                                <div class="form-check hobbie col-3 mb-3 mt-3">
-                                    <input class="form-check-input" type="checkbox" checked >
-                                    <label class="form-check-label" >
-                                        Polo
-                                    </label>
-                                </div>
-                                <div class="form-check hobbie col-3 mb-3 mt-3">
-                                    <input class="form-check-input" type="checkbox" checked >
-                                    <label class="form-check-label" >
-                                        Dough
-                                    </label>
-                                </div>
-                                <div class="form-check hobbie col-3 mb-3 mt-3">
-                                    <input class="form-check-input" type="checkbox" checked >
-                                    <label class="form-check-label" >
-                                        Snails
-                                    </label>
-                                </div>
-                                <div class="form-check hobbie col-3 mb-3 mt-3">
-                                    <input class="form-check-input" type="checkbox" checked >
-                                    <label class="form-check-label" >
-                                        Balls
-                                    </label>
-                                </div>
-                                <div class="form-check hobbie col-3 mb-3 mt-3">
-                                    <input class="form-check-input" type="checkbox" checked >
-                                    <label class="form-check-label" >
-                                        Post-its
-                                    </label>
-                                </div>
-                                <div class="form-check hobbie col-3 mb-3 mt-3">
-                                    <input class="form-check-input" type="checkbox" checked >
-                                    <label class="form-check-label" >
-                                        Faucets
-                                    </label>
-                                </div>
-                                <div class="form-check hobbie col-3 mb-3 mt-3">
-                                    <input class="form-check-input" type="checkbox" checked >
-                                    <label class="form-check-label" >
-                                        Enveloppes
-                                    </label>
-                                </div>
-                                <div class="form-check hobbie col-3 mb-3 mt-3">
-                                    <input class="form-check-input" type="checkbox" checked >
-                                    <label class="form-check-label" >
-                                        Cables
-                                    </label>
-                                </div>
-                                <div class="form-check hobbie col-3 mb-3 mt-3">
-                                    <input class="form-check-input" type="checkbox" checked >
-                                    <label class="form-check-label" >
-                                        Questions
-                                    </label>
-                                </div>
-                                <div class="form-check hobbie col-3 mb-3 mt-3">
-                                    <input class="form-check-input" type="checkbox" checked >
-                                    <label class="form-check-label" >
-                                        Squares
-                                    </label>
-                                </div>
-                                <div class="form-check hobbie col-3 mb-3 mt-3">
-                                    <input class="form-check-input" type="checkbox" checked >
-                                    <label class="form-check-label" >
-                                        Purple
-                                    </label>
-                                </div>
-                                <div class="form-check hobbie col-3 mb-3 mt-3">
-                                    <input class="form-check-input" type="checkbox" checked id="unselect">
-                                    <label class="form-check-label" >
-                                        Unselect all
-                                    </label>
-                                </div>
-                                <div class="form-check hobbie col-3 mb-3 mt-3">
-                                    <input class="form-check-input" type="checkbox" checked >
-                                    <label class="form-check-label" >
-                                        Dry-wall
-                                    </label>
-                                </div>
-                                <div class="form-check hobbie col-3 mb-3 mt-3">
-                                    <input class="form-check-input" type="checkbox" checked >
-                                    <label class="form-check-label" >
-                                        Closets
-                                    </label>
-                                </div>
-                                <div class="form-check hobbie col-3 mb-3 mt-3">
-                                    <input class="form-check-input" type="checkbox" checked >
-                                    <label class="form-check-label" >
-                                        Tires
-                                    </label>
-                                </div>
-                                <div class="form-check hobbie col-3 mb-3 mt-3">
-                                    <input class="form-check-input" type="checkbox" checked >
-                                    <label class="form-check-label" >
-                                        Windows
-                                    </label>
-                                </div>
-                                <div class="form-check hobbie col-3 mb-3 mt-3">
-                                    <input class="form-check-input" type="checkbox" checked id="select">
-                                    <label class="form-check-label" >
-                                        Select all
-                                    </label>
-                                </div>
-                                <div class="form-check hobbie col-3 mb-3 mt-3">
-                                    <input class="form-check-input" type="checkbox" checked >
-                                    <label class="form-check-label" >
-                                        Mullets
-                                    </label>
-                                </div>
-                                <div class="form-check hobbie col-3 mb-3 mt-3">
-                                    <input class="form-check-input" type="checkbox" checked >
-                                    <label class="form-check-label" >
-                                        Cinnamon
-                                    </label>
-                                </div>
-                                <div class="form-check hobbie col-3 mb-3 mt-3">
-                                    <input class="form-check-input" type="checkbox" checked >
-                                    <label class="form-check-label" >
-                                        Cotton
-                                    </label>
-                                </div>
+  </head>
+  <body>
+    <section
+      class="d-flex justify-content-center align-items-center vh-100"
+      style="background-color: #eee"
+    >
+      <div class="container h-100">
+        <div class="row d-flex justify-content-center align-items-center h-100">
+          <div class="col-lg-12 col-xl-11">
+            <div class="card text-black" style="border-radius: 25px">
+              <div class="card-body p-md-5">
+                <div class="row justify-content-center">
+                  <div class="col-10 order-2 order-lg-1">
+                    <p class="text-center h1 fw-bold mb-5 mx-1 mx-md-4 mt-4">
+                      Select Your Hobbies
+                    </p>
+
+                    <p class="mb-3 h3">Choose 5 hobbies</p>
+                    <form>
+                      <div
+                        class="hobbies d-flex justify-content-between flex-wrap border-bottom mb-5"
+                      >
+                        <div class="form-check hobbie col-3 mb-3 mt-3">
+                          <input
+                            class="form-check-input hobbie"
+                            type="checkbox"
+                            checked
+                          />
+                          <label class="form-check-label"> Ponies </label>
                         </div>
-                        <div class="row">
-                            <div class="col-6">
-                                <button type="button" id="nextBtn" class="btn btn-danger w-100 mt-2  mb-2">Next</button>
+                        <div class="form-check hobbie col-3 mb-3 mt-3">
+                          <input
+                            class="form-check-input hobbie"
+                            type="checkbox"
+                            checked
+                          />
+                          <label class="form-check-label"> Polo </label>
+                        </div>
+                        <div class="form-check hobbie col-3 mb-3 mt-3">
+                          <input
+                            class="form-check-input hobbie"
+                            type="checkbox"
+                            checked
+                          />
+                          <label class="form-check-label"> Dough </label>
+                        </div>
+                        <div class="form-check hobbie col-3 mb-3 mt-3">
+                          <input
+                            class="form-check-input hobbie"
+                            type="checkbox"
+                            checked
+                          />
+                          <label class="form-check-label"> Snails </label>
+                        </div>
+                        <div class="form-check hobbie col-3 mb-3 mt-3">
+                          <input
+                            class="form-check-input hobbie"
+                            type="checkbox"
+                            checked
+                          />
+                          <label class="form-check-label"> Balls </label>
+                        </div>
+                        <div class="form-check hobbie col-3 mb-3 mt-3">
+                          <input
+                            class="form-check-input hobbie"
+                            type="checkbox"
+                            checked
+                          />
+                          <label class="form-check-label"> Post-its </label>
+                        </div>
+                        <div class="form-check hobbie col-3 mb-3 mt-3">
+                          <input
+                            class="form-check-input hobbie"
+                            type="checkbox"
+                            checked
+                          />
+                          <label class="form-check-label"> Faucets </label>
+                        </div>
+                        <div class="form-check hobbie col-3 mb-3 mt-3">
+                          <input
+                            class="form-check-input hobbie"
+                            type="checkbox"
+                            checked
+                          />
+                          <label class="form-check-label"> Envelopes </label>
+                        </div>
+                        <div class="form-check hobbie col-3 mb-3 mt-3">
+                          <input
+                            class="form-check-input hobbie"
+                            type="checkbox"
+                            checked
+                          />
+                          <label class="form-check-label"> Cables </label>
+                        </div>
+                        <div class="form-check hobbie col-3 mb-3 mt-3">
+                          <input
+                            class="form-check-input hobbie"
+                            type="checkbox"
+                            checked
+                          />
+                          <label class="form-check-label"> Questions </label>
+                        </div>
+                        <div class="form-check hobbie col-3 mb-3 mt-3">
+                          <input
+                            class="form-check-input hobbie"
+                            type="checkbox"
+                            checked
+                          />
+                          <label class="form-check-label"> Squares </label>
+                        </div>
+                        <div class="form-check hobbie col-3 mb-3 mt-3">
+                          <input
+                            class="form-check-input hobbie"
+                            type="checkbox"
+                            checked
+                          />
+                          <label class="form-check-label"> Purple </label>
+                        </div>
+                        <div class="form-check hobbie col-3 mb-3 mt-3">
+                          <input
+                            class="form-check-input"
+                            type="checkbox"
+                            checked
+                            id="unselect"
+                          />
+                          <label class="form-check-label"> Unselect all </label>
+                        </div>
+                        <div class="form-check hobbie col-3 mb-3 mt-3">
+                          <input
+                            class="form-check-input hobbie"
+                            type="checkbox"
+                            checked
+                          />
+                          <label class="form-check-label"> Dry-wall </label>
+                        </div>
+                        <div class="form-check hobbie col-3 mb-3 mt-3">
+                          <input
+                            class="form-check-input hobbie"
+                            type="checkbox"
+                            checked
+                          />
+                          <label class="form-check-label"> Closets </label>
+                        </div>
+                        <div class="form-check hobbie col-3 mb-3 mt-3">
+                          <input
+                            class="form-check-input hobbie"
+                            type="checkbox"
+                            checked
+                          />
+                          <label class="form-check-label"> Tires </label>
+                        </div>
+                        <div class="form-check hobbie col-3 mb-3 mt-3">
+                          <input
+                            class="form-check-input hobbie"
+                            type="checkbox"
+                            checked
+                          />
+                          <label class="form-check-label"> Windows </label>
+                        </div>
+                        <div class="form-check hobbie col-3 mb-3 mt-3">
+                          <input
+                            class="form-check-input"
+                            type="checkbox"
+                            checked
+                            id="select"
+                          />
+                          <label class="form-check-label"> Select all </label>
+                        </div>
+                        <div class="form-check hobbie col-3 mb-3 mt-3">
+                          <input
+                            class="form-check-input hobbie"
+                            type="checkbox"
+                            checked
+                          />
+                          <label class="form-check-label"> Mullets </label>
+                        </div>
+                        <div class="form-check hobbie col-3 mb-3 mt-3">
+                          <input
+                            class="form-check-input hobbie"
+                            type="checkbox"
+                            checked
+                          />
+                          <label class="form-check-label"> Cinnamon </label>
+                        </div>
+                        <div class="form-check hobbie col-3 mb-3 mt-3">
+                          <input
+                            class="form-check-input hobbie"
+                            type="checkbox"
+                            checked
+                          />
+                          <label class="form-check-label"> Cotton </label>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-6">
+                          <button
+                            type="button"
+                            id="nextBtn"
+                            class="btn btn-danger w-100 mt-2 mb-2"
+                          >
+                            Next
+                          </button>
+                        </div>
+                        <div class="col-6">
+                          <button
+                            type="button"
+                            id="cancelBtn"
+                            class="btn btn-primary w-100 mt-2 mb-2"
+                          >
+                            Cancel
+                          </button>
+                        </div>
+                        <div class="col-12">
+                          <button
+                            type="button"
+                            id="resetBtn"
+                            class="btn btn-success w-100 mt-2 mb-2"
+                          >
+                            Reset
+                          </button>
+                        </div>
+                      </div>
+                    </form>
+
+                    <div class="modal" id="repeat" tabindex="-1">
+                      <div class="modal-dialog modal-dialog-centered">
+                        <div class="modal-content">
+                          <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLongTitle">
+                              Repeat your password (●'◡'●)
+                            </h5>
+                          </div>
+                          <div class="modal-body">
+                            <div
+                              class="d-flex flex-row align-items-center rePassword-container"
+                            >
+                              <div class="form-outline flex-fill">
+                                <input
+                                  type="text"
+                                  id="rePassword"
+                                  class="form-control form-reg"
+                                  value="Repeat your password"
+                                  oncopy="this.value='';return false"
+                                  onpaste="this.value=''; return false"
+                                  oncut="this.value=''; return false"
+                                />
+                              </div>
                             </div>
-                            <div class="col-6">
-                                <button type="button" id="cancelBtn"  class="btn btn-primary w-100 mt-2  mb-2">Cancel</button>
-                            </div>
-                            <div class="col-12">
-                                <button type="button" id="resetBtn"  class="btn btn-success w-100 mt-2  mb-2">Reset</button>
-                            </div>
-                        </div>        
-                      </form>
+                          </div>
+                          <div class="modal-footer">
+                            <button type="button" class="btn btn-danger" id="modalNext">Next</button>
+                            <button type="button" class="btn btn-primary" id="modalCancel">Cancel</button>
+                            <button type="button" class="btn btn-success" id="modalReset">Reset</button>
+                          </div>
+                        </div>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -169,7 +269,9 @@
             </div>
           </div>
         </div>
-      </section>
-</body>
-<script src="./src/js/hobbies.js"></script>
+      </div>
+    </section>
+  </body>
+  <script src="src/js/bootstrap.bundle.min.js"></script>
+  <script type="module" src="./src/js/hobbies/hobbies.js"></script>
 </html>

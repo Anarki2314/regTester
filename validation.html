@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/src/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="/src/css/addInfo.css" />
+    <title>Additional Information</title>
+</head>
+<style>
+
+
+</style>
+
+<body>
+    <section class="d-flex justify-content-center align-items-center vh-100" style="background-color: #eee">
+        <div class="container h-100">
+            <div class="row d-flex justify-content-center align-items-center h-100">
+                <div class="col-lg-12 col-xl-11">
+                    <div class="card text-black" style="border-radius: 25px">
+                        <div class="card-body p-md-5">
+                            <div class="row justify-content-center">
+                                <div class="col-10 order-2 order-lg-1">
+                                    <p class="text-center h1 fw-bold mb-5 mx-1 mx-md-4 mt-4">
+                                        Write Correct Answers
+                                    </p>
+                                    <p class="mb-3 h3">Solve quadratic equations (if zero answers write 0 in both fields, if there is one answer, write it in both fields )</p>
+                                    <form>
+                                        <div
+                                            class="equas d-flex justify-content-between flex-wrap border-bottom mb-5">
+                                                <div class="form-check equa col-6 mb-3 mt-3 text-center" id = 'equaLeft'>
+                                                    <label class="form-check-label equa-title"><span class="equaSignA"></span> <span class="equaA">1</span>x²<span class="equaSignB"></span><span class="equaB">1</span>x <span class="equaSignC"></span><span class="equaC">1</span>=0</label>
+                                                    <div class="row mt-3">
+                                                        <div class="col-6">
+                                                            <input type="text" class=" form-control equa-input-answer" placeholder="answer">
+                                                        </div>
+                                                        <div class="col-6">
+                                                            <input type="text" class=" form-control equa-input-answer" placeholder="answer">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="form-check equa col-6 mb-3 mt-3 text-center" id = 'equaRight'>
+                                                    <label class="form-check-label equa-title"> <span class="equaA">1</span>x²<span class="equaB">1</span>x <span class="equaC">1</span>=0</label>
+                                                    <div class="row mt-3">
+                                                        <div class="col-6">
+                                                            <input type="text" class=" form-control equa-input-answer" placeholder="answer">
+                                                        </div>
+                                                        <div class="col-6">
+                                                            <input type="text" class=" form-control equa-input-answer" placeholder="answer">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                        </div>
+
+                                        <div class="row">
+
+                                            <div class="col-6">
+                                                <button type="button" id="nextBtn"
+                                                    class="btn btn-danger w-100 mt-2 mb-2">
+                                                    Next
+                                                </button>
+                                            </div>
+                                            <div class="col-6">
+                                                <button type="button" id="cancelBtn"
+                                                    class="btn btn-primary w-100 mt-2 mb-2">
+                                                    Cancel
+                                                </button>
+                                            </div>
+                                            <div class="col-12">
+                                                <button type="button" id="resetBtn"
+                                                    class="btn btn-success w-100 mt-2 mb-2">
+                                                    Reset
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </form>
+
+                                    <div class="modal" id="repeat" tabindex="-1">
+                                        <div class="modal-dialog modal-dialog-centered">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                    <h5 class="modal-title" id="exampleModalLongTitle">
+                                                        Repeat your password (●'◡'●)
+                                                    </h5>
+                                                </div>
+                                                <div class="modal-body">
+                                                    <div
+                                                        class="d-flex flex-row align-items-center rePassword-container">
+                                                        <div class="form-outline flex-fill">
+                                                            <input type="password" id="rePassword"
+                                                                class="form-control form-reg"
+                                                                value="Repeat your password"
+                                                                oncopy="this.value='';return false"
+                                                                onpaste="this.value=''; return false"
+                                                                oncut="this.value=''; return false" />
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="modal-footer">
+                                                    <button type="button" class="btn btn-danger" id="modalNext">
+                                                        Next
+                                                    </button>
+                                                    <button type="button" class="btn btn-primary" id="modalCancel">
+                                                        Cancel
+                                                    </button>
+                                                    <button type="button" class="btn btn-success" id="modalReset">
+                                                        Reset
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+<script src="src/js/bootstrap.bundle.min.js"></script>
+<script type="module" src="./src/js/val/val.js"></script>
+
+</html>

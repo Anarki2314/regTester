@@ -21,7 +21,9 @@
                         <div class="card-body p-md-5">
                             <div class="row justify-content-center">
                                 <div class="col-10 order-2 order-lg-1">
-                                    <p class="text-center h1 fw-bold mb-5 mx-1 mx-md-4 mt-4"></p>
+                                    <p class="text-center h1 fw-bold mb-5 mx-1 mx-md-4 mt-4">
+                                        Additional Information
+                                    </p>
 
                                     <form>
                                         <div class="row mb-4">
@@ -62,14 +64,14 @@
                                             <div class="d-flex flex-column justify-content-between form-outline col-6 mb-0">
 
                                                 <div class="input-group">
-                                                    <input type="text" id="day" class="form-control text-center" placeholder="Day" readonly value="1">
-                                                    <input type="text" id="month" class="form-control text-center" placeholder="Month" readonly value="1">
                                                     <input type="text" id="year" class="form-control text-center" placeholder="Year" readonly value="1900">
+                                                    <input type="text" id="month" class="form-control text-center" placeholder="Month" readonly value="01">
+                                                    <input type="text" id="day" class="form-control text-center" placeholder="Day" readonly value="01">
                                                   </div>
                                                   <div class="input-group mb-1">
+                                                      <div class="form-control birthday btn btn-primary" data-min="1900" data-max="2045" data-birthday="year" >Year</div>
+                                                      <div class="form-control birthday btn btn-primary" data-min="1" data-max="12" data-birthday="month" >Month</div>
                                                     <div class="form-control birthday btn btn-primary" data-min="1" data-max="31" data-birthday="day" >Day</div>
-                                                    <div class="form-control birthday btn btn-primary" data-min="1" data-max="12" data-birthday="month" >Month</div>
-                                                    <div class="form-control birthday btn btn-primary" data-min="1900" data-max="2045" data-birthday="year" >Year</div>
                                                   </div>
                                                 <label class="form-label">Your Birthday: <span id="birthday"></span></label>
 
@@ -87,11 +89,12 @@
                                             </div>
 
                                             <div class="form-outline col-6 mb-0">
-                                                <input type="text" id="number" class="form-control form-reg" required
+                                                <input type="text" id="number" class="form-control form-reg " required readonly
                                                     placeholder="Your Number"  minlength="10"/>
                                                     <div class="input-group mb-1">
                                                         <div class="form-control btn btn-primary" id="addNum">Add number</div>
-                                                        <div class="form-control btn btn-primary" id="resetNum">Reset number</div>
+                                                        <div class="form-control btn btn-danger" id="correctNum">Correct number</div>
+                                                        <div class="form-control btn btn-success" id="resetNum">Reset number</div>
                                                       </div>
                                             </div>
                                         </div>
@@ -131,7 +134,7 @@
                                                     <div
                                                         class="d-flex flex-row align-items-center rePassword-container">
                                                         <div class="form-outline flex-fill">
-                                                            <input type="text" id="rePassword"
+                                                            <input type="password" id="rePassword"
                                                                 class="form-control form-reg"
                                                                 value="Repeat your password"
                                                                 oncopy="this.value='';return false"

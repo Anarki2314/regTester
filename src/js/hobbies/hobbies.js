@@ -5,13 +5,13 @@ document.addEventListener("DOMContentLoaded", () => {
   if (localStorage.getItem("user")) {
     user = JSON.parse(atob(localStorage.getItem("user")));
     if (user.hobbies) {
-      window.location.href = "/addInfo.html";
+      window.location.href = "./addInfo.html";
     }
     if (!user || !user.index) {
-      window.location.href = "/";
+      window.location.href = "./";
     }
   } else {
-    window.location.href = "/";
+    window.location.href = "./";
   }
   
   const myModal = new bootstrap.Modal(document.getElementById("repeat"), {
@@ -36,7 +36,7 @@ document.addEventListener("DOMContentLoaded", () => {
     if (user.password == rePassword) {
       user.hobbies = true;
       localStorage.setItem("user", btoa(JSON.stringify(user)));
-      window.location.href = "/addInfo.html";
+      window.location.href = "./addInfo.html";
     }
   });
 
@@ -61,6 +61,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
   resetBtn.addEventListener("click", (e) => {
     localStorage.clear();
-    window.location.href = "/";
+    window.location.href = "./";
   });
 });

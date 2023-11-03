@@ -5,10 +5,10 @@ document.addEventListener("DOMContentLoaded", () => {
   if (localStorage.getItem("user")) {
       user = JSON.parse(atob(localStorage.getItem("user")));
     if (!user || !user.index || !user.hobbies || !user.addInfo || !user.validation) { 
-      window.location.href = "/";
+      window.location.href = "./";
     }
   } else {
-    window.location.href = "/";
+    window.location.href = "./";
   }
   const timeStart = localStorage.getItem("time") ;
   const timeEnd = new Date((Date.now() - timeStart)) ;
@@ -25,6 +25,6 @@ document.addEventListener("DOMContentLoaded", () => {
   
   resetBtn.addEventListener("click", (e) => {
     localStorage.clear();
-    window.location.href = "/";
+    window.location.href = "./";
   });
 });

@@ -8,6 +8,7 @@ export default {
         
         const solve = (equa) => {
           const D = Math.pow(equa.b, 2) - 4 * (equa.a * equa.c);
+
           if (D < 0) {
             return {};
           }
@@ -29,9 +30,8 @@ export default {
           'b': Number(equaRight.querySelector(".equaB").innerHTML),
           'c': Number(equaRight.querySelector(".equaC").innerHTML)
         }
-    
-        const equaLeftAnswers = solve(equaRightParams);
-        const equaRightAnswers = solve(equaLeftParams);
+        const equaLeftAnswers = solve(equaLeftParams);
+        const equaRightAnswers = solve(equaRightParams);
         return {equaLeftAnswers,
         equaRightAnswers}
       },

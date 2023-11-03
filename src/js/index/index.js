@@ -9,7 +9,7 @@ document.addEventListener("DOMContentLoaded", () => {
   if (localStorage.getItem("user")) {
     user = JSON.parse(atob(localStorage.getItem("user")));
     if (user.index) {
-      window.location.href = "/hobbies.html";
+      window.location.href = "./hobbies.html";
     }
 
   }
@@ -51,7 +51,7 @@ document.addEventListener("DOMContentLoaded", () => {
           })
         )
       );
-      window.location.href = "/hobbies.html";
+      window.location.href = "./hobbies.html";
     } else {
       myModal.show();
     }
